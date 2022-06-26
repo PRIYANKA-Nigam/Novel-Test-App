@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.noveltest">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,8 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NovelTest">
-        <activity android:name=".AddBook"></activity>
-        <activity android:name=".BookMark"></activity>
+        <activity android:name=".Note2Helper"></activity>
+        <activity android:name=".Pronounciation3" />
+        <activity android:name=".Meaning3" />
+        <activity android:name=".Note3" />
+        <activity android:name=".Note2" />
+        <activity android:name=".Pronounciation2" />
+        <activity android:name=".Meaning2" />
+        <activity android:name=".Note" />
+        <activity android:name=".Pronounciation" />
+        <activity android:name=".Meaning" />
+        <activity android:name=".AddBook" />
+        <activity android:name=".BookMark" />
         <activity android:name=".Summary2Activity" />
         <activity android:name=".Novel2Activity" />
         <activity android:name=".SummaryActivity" />
