@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NovelTest">
+        <activity android:name=".AddBook"></activity>
         <activity android:name=".BookMark"></activity>
         <activity android:name=".Summary2Activity" />
         <activity android:name=".Novel2Activity" />
