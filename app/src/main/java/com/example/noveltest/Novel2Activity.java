@@ -3,6 +3,7 @@ package com.example.noveltest;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -79,6 +80,10 @@ public class Novel2Activity extends AppCompatActivity {
             case R.id.note:
                 Intent intent4 = new Intent(Novel2Activity.this, Note3.class);
                 startActivity(intent4);
+                break;
+            case R.id.globe:
+                Intent intent5 = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
+                startActivity(intent5);
                 break;
         }
         return super.onOptionsItemSelected(item); }
