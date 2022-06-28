@@ -6,7 +6,7 @@
         android:icon="@drawable/home"
         app:showAsAction="always"/>
     <item android:id="@+id/globe"
-        android:title="Home"
+        android:title="Search on Google"
         android:icon="@drawable/globe"
         app:showAsAction="always"/>
     <item

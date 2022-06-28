@@ -11,6 +11,11 @@
         android:icon="@drawable/novel"
 
         />
+    <item android:id="@+id/audio"
+        android:title="Summary Audio"
+        android:tooltipText="Novel Story"
+        android:icon="@drawable/audio"
+        />
     <item android:id="@+id/bookmark"
         android:title="BookMark"
         android:tooltipText="Novel Story"

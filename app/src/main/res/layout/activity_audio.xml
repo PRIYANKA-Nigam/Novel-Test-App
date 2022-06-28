@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context=".AudioActivity">
+    <TextView
+        android:id="@+id/tt"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:text="Listen to the Novel Summary"
+        android:textSize="25sp"
+        android:paddingBottom="10dp"
+        android:textColor="#ff00ff"
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+    <ListView
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="501dp"
+        android:layout_below="@id/tt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:padding="10dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="398dp"
+        android:layout_height="92dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="6dp"
+        app:itemBackground="@color/purple_500"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_navigation" />
+</RelativeLayout>

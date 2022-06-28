@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NovelTest">
+        <activity android:name=".AudioActivity"></activity>
         <activity android:name=".Note2Helper" />
         <activity android:name=".Pronounciation3" />
         <activity android:name=".Meaning3" />
