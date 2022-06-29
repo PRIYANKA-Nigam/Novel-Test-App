@@ -1,16 +1,21 @@
 package com.example.noveltest;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.Build;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import java.net.NetworkInterface;
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -18,6 +23,7 @@ public class Meaning2 extends AppCompatActivity {
     String url;
     TextView textView;
     EditText e;
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +31,7 @@ public class Meaning2 extends AppCompatActivity {
         e=(EditText)findViewById(R.id.editTextTextPersonName2);
         textView=(TextView)findViewById(R.id.textView2);
     }
+
     public void bSpeech(View view) {
         Intent intent=new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);

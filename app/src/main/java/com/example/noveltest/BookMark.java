@@ -7,7 +7,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -23,7 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookMark extends AppCompatActivity {
-    Context context;DBHelper dbHelper;private ListView listView;private TextView textView;private Button button;
+    Context context;DBHelper dbHelper;private ListView listView;private TextView textView,textView2;private Button button;
     private List<Book> books;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,8 @@ public class BookMark extends AppCompatActivity {
         dbHelper=new DBHelper(context);
         listView=(ListView)findViewById(R.id.ll);
         textView=(TextView)findViewById(R.id.textView4);
+        textView2=(TextView)findViewById(R.id.ttt);
+        textView2.setSelected(true);
         button=(Button)findViewById(R.id.button);
         int count=dbHelper.countBooks();
         textView.setText("You have "+count +" books");
@@ -109,4 +114,5 @@ public class BookMark extends AppCompatActivity {
             }
             return false; }});
     }
+
 }

@@ -76,11 +76,29 @@ public class MusicAdapter extends BaseAdapter {
                 viewHolder.pause.setImageResource(R.drawable.pauses);
             }
         });
+        viewHolder.back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+             int pos=mediaPlayer.getCurrentPosition();
+                if(mediaPlayer.isPlaying() && pos>5000) {
+                    pos -= 5000; mediaPlayer.seekTo(pos);
+                }
+                }
+        });
+        viewHolder.front.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int pos=mediaPlayer.getCurrentPosition();
+                if(mediaPlayer.isPlaying()) {
+                    pos += 5000; mediaPlayer.seekTo(pos);
+                }
+            }
+        });
         return convertView;
     }
     public class ViewHolder{
         TextView song,textView_artist;
-        ImageView play,pause;
+        ImageView play,pause,back,front;
         private View convertview;
         LayoutInflater layoutInflater=(LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
         public ViewHolder(){
@@ -89,6 +107,8 @@ public class MusicAdapter extends BaseAdapter {
             textView_artist=convertview.findViewById(R.id.tt3);
             play=convertview.findViewById(R.id.img2);
             pause=convertview.findViewById(R.id.img3);
+            back=convertview.findViewById(R.id.img4);
+            front=convertview.findViewById(R.id.img5);
 
         }
     }

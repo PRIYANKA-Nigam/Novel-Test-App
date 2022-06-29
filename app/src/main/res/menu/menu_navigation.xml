@@ -12,7 +12,7 @@
 
         />
     <item android:id="@+id/audio"
-        android:title="Summary Audio"
+        android:title="Audio"
         android:tooltipText="Novel Story"
         android:icon="@drawable/audio"
         />

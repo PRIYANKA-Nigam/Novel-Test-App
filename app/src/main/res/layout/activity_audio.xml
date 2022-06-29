@@ -8,14 +8,17 @@
     tools:context=".AudioActivity">
     <TextView
         android:id="@+id/tt"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:padding="10dp"
         android:layout_height="wrap_content"
-        android:text="Listen to the Novel Summary"
+        android:text="Listen to the Novel Summary ... Listen to the Novel Summary ... "
         android:textSize="25sp"
         android:paddingBottom="10dp"
         android:textColor="#ff00ff"
-        android:gravity="center"
+        android:layout_gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:ellipsize="marquee"
+        android:singleLine="true"
         android:textStyle="bold"/>
 
     <ListView
